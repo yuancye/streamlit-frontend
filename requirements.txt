@@ -1,2 +1,3 @@
 streamlit==1.40.0
-streamlit-drawable-canvas @ git+https://github.com/VikParuchuri/streamlit-drawable-canvas@c6b9290ddfae8f347c652986cfd844065c6195c5
+streamlit-drawable-canvas==0.8.0
+# @ git+https://github.com/VikParuchuri/streamlit-drawable-canvas@c6b9290ddfae8f347c652986cfd844065c6195c5
