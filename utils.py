@@ -2,7 +2,7 @@
 import requests
 import json
 
-FASTAPI_URL = "http://127.0.0.1:8000/infer"
+FASTAPI_URL = "https://composite-table-already-transaction.trycloudflare.com/infer"
 
 def run_inference(uploaded_file, nms, min_score, bboxes=None):
 
