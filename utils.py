@@ -1,6 +1,7 @@
 
 import requests
 import json
+import streamlit as st
 
 FASTAPI_URL = "https://composite-table-already-transaction.trycloudflare.com/infer"
 
@@ -18,6 +19,7 @@ def run_inference(uploaded_file, nms, min_score, bboxes=None):
     try:
         response = requests.post(FASTAPI_URL, files=files, data=data)
         response.raise_for_status()   
+        st.write(response.text)
         return response.json() 
     except requests.exceptions.RequestException as e:
         print(f"Error calling FastAPI: {e}")
