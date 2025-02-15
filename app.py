@@ -57,6 +57,11 @@ if uploaded_image:
         inference_btn = st.button("Run inference", key="inference", use_container_width=True, type="primary")
         if inference_btn:
             response = run_inference(uploaded_file, nms, min_score)
+    
+            st.write("Response from backend:", response)  # Log the response for debugging
+    
+            # Debugging: Check the type of the result
+            st.write("Type of result:", type(response["results"]))
             
             inference_result = np.array(response["results"])
             if isinstance(inference_result, np.ndarray):
